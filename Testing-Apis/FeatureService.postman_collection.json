@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "fcc7a1a8-ac9b-4a8a-b344-58b6806f0ee3",
+		"name": "FeatureService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a feature",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"soyelULTIMO\",\r\n    \"icon\": \"soyelULTIMO\",\r\n    \"createAt\": \"2021-11-03T17:57:12.475+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/feature/save",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"feature",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a feature",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 22,\r\n    \"name\": \"Agua potable\",\r\n    \"icon\": \"FaWater\",\r\n    \"createAt\": \"2021-11-07T23:01:30.277+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/feature/22",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"feature",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a feature",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/feature/22",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"feature",
+						"22"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

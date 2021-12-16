@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "categorie":"Casa",
+        "name":"Nombre",
+        "location":"Bogotá",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./house-categories.jpg",
+        "alt":"Casa"
+    },
+    {
+        "id":2,
+        "categorie":"Cabaña",
+        "name":"Nombre",
+        "location":"Cartagena",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./cabin-categories.jpg",
+        "alt":"Cabaña"
+    },
+    {
+        "id":3,
+        "categorie":"Departamento",
+        "name":"Nombre",
+        "location":"Medellín",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./apartment-categories-2.jpg",
+        "alt":"Departamento"
+    },
+    {
+        "id":4,
+        "categorie":"Cabaña",
+        "name":"Nombre",
+        "location":"Bogotá",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./cabin-categories-2.jpg",
+        "alt":"Cabaña"
+    },
+    {
+        "id":5,
+        "categorie":"Casa",
+        "name":"Nombre",
+        "location":"Barranquilla",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./house-categories-2.jpg",
+        "alt":"Casa"
+    },
+    {
+        "id":6,
+        "categorie":"Quinta",
+        "name":"Nombre",
+        "location":"Medellín",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./villa-categories.jpg",
+        "alt":"Quinta"
+    },
+    {
+        "id":7,
+        "categorie":"Departamento",
+        "name":"Nombre",
+        "location":"Barranquilla",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./apartment-categories.jpg",
+        "alt":"Departamento"
+    },
+    {
+        "id":8,
+        "categorie":"Quinta",
+        "name":"Nombre",
+        "location":"Cartagena",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, aut omnis laudantium quaerat dolorum.",
+        "img":"./villa-categories-2.jpg",
+        "alt":"Quinta"
+    }
+]

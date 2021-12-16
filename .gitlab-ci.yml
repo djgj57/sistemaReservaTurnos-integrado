@@ -1,0 +1,69 @@
+
+build-react:
+  image: node:14  
+  stage: build
+  script:
+    - apt-get update
+    - apt-get -y install zip unzip
+    - cd hus-front
+    - CI=false npm install
+    - CI=false npm run build
+    - zip -r build-react.zip appspec.yml ./build
+  only:
+    - main
+  artifacts:
+    paths:
+      - hus-front/build-react.zip
+
+update-react-aws-es:
+  image: python:latest
+  stage: deploy
+  needs: ['build-react']
+  script:
+    - pip install awscli  # AWS CLI installation
+    - cd hus-front
+    - aws s3 cp build-react.zip s3://$S3_BUCKET_NAME/
+
+deploy-react-aws-es:
+  image: python:latest
+  stage: deploy
+  needs: ['update-react-aws-es']
+  script:
+    - pip install awscli  # AWS CLI installation
+    - aws deploy create-deployment --application-name deploy-hus-react --deployment-group-name deploy-hus-react --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=build-react.zip --file-exists-behavior OVERWRITE
+
+
+build-java-spring:
+  image: maven:3.8.4-jdk-11-slim
+  stage: build
+  script:
+    - apt-get update
+    - apt-get -y install zip unzip
+    - cd hus-back
+    - mvn install -Dmaven.test.skip=true
+    - zip -r build-java-spring.zip appspec.yml ./deploy-scripts ./target
+  only:
+    - main
+  artifacts:
+    paths:
+      - hus-back/build-java-spring.zip
+
+update-java-spring-aws-es:
+  image: python:latest
+  stage: deploy
+  needs: ['build-java-spring']
+  script:
+    - pip install awscli  # AWS CLI installation
+    - cd hus-back
+    - aws s3 cp build-java-spring.zip s3://$S3_BUCKET_NAME/
+
+deploy-java-spring-aws-es:
+  image: python:latest
+  stage: deploy
+  needs: ['update-java-spring-aws-es']
+  script:
+    - pip install awscli  # AWS CLI installation
+    - aws deploy create-deployment --application-name deploy-hus-java-spring --deployment-group-name deploy-hus-java-spring --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=build-java-spring.zip --file-exists-behavior OVERWRITE
+
+
+    

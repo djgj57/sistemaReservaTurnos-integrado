@@ -1,0 +1,68 @@
+{
+  "name": "hus-front",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^0.1.1",
+    "@react-google-maps/api": "^2.5.0",
+    "@stitches/react": "^1.2.6",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^12.8.3",
+    "canvas": "^2.8.0",
+    "formik": "^2.2.9",
+    "fslightbox-react": "^1.6.2-2",
+    "react": "^17.0.2",
+    "react-calendar": "^3.4.0",
+    "react-carousel-minimal": "^1.4.1",
+    "react-dom": "^17.0.2",
+    "react-grid-gallery": "^0.5.5",
+    "react-icons": "^4.3.1",
+    "react-image-gallery": "^1.2.7",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^5.2.1",
+    "react-share": "^4.4.0",
+    "styled-components": "^5.3.3",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/components/styles/",
+      "<rootDir>/src/pages/styles/",
+      "<rootDir>/src/templates/styles/",
+      "<rootDir>/src/json",
+      "<rootDir>/pages/asset/Assets.jsx",
+      "<rootDir>/src/index.jsx",
+      "<rootDir>/src/App.jsx",
+      "<rootDir>/src/reportWebVitals.js"
+    ]
+  }
+}

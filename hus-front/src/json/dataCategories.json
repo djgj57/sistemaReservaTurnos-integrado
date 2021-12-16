@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "title":"Casas",
+        "options":"1103",
+        "img":"https://i.ibb.co/C76Yq6F/house-categories-2.jpg",
+        "alt": "Casa"
+    },
+    {
+        "id":2,
+        "title":"Cabañas",
+        "options":"876",
+        "img":"https://i.ibb.co/9pkz8MV/cabin-categories-2.jpg",
+        "alt": "Cabaña"
+    },
+    {
+        "id":3,
+        "title":"Departamentos",
+        "options":"1456",
+        "img":"https://i.ibb.co/3SBrjRN/apartment-categories-2.jpg",
+        "alt": "Departamento"
+    },
+    {
+        "id":4,
+        "title":"Quintas",
+        "options":"439",
+        "img":"https://i.ibb.co/0VcrG4c/villa-categories.jpg",
+        "alt": "Quinta"
+    }
+    ]
